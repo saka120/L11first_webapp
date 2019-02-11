@@ -56,7 +56,9 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 
     // 入力内容にエラーがあったかどうか
     if(errors.size() > 0) {
-        // JSPにエラー内容を送る
+
+
+     // JSPにエラー内容を送る
         request.setAttribute("errors", errors);
     } else {
         // JSPに入力データを送る
@@ -92,5 +94,4 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 }
 
 */
-
 
