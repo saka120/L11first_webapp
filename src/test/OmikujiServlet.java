@@ -2,8 +2,10 @@ package test;
 
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,7 +44,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 
     //String usermail = request.getParameter("usermail");
     //String content  = request.getParameter("content");
-    //String result  = request.getParameter("result");
+
+    String result  = request.getParameter("result");
 
 
     // 入力項目チェック（バリデーション）
@@ -65,8 +68,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
       //  request.setAttribute("usermail", usermail);
       //  request.setAttribute("content", content);
 
-        String[] omikuji_results = {"大吉", "吉", "中吉", "小吉", "末吉", "凶"};
-        request.setAttribute("omikuji_result", omikuji_results[(int)(Math.random() * 6)]);
+        String[] results = {"大吉", "吉", "中吉", "小吉", "末吉", "凶"};
+        request.setAttribute("result", results[(int)(Math.random() * 6)]);
 
     }
 
@@ -77,88 +80,6 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/omikuji_result.jsp");
     rd.forward(request, response);
 }
-
-//  test  test
-
+}
 
 
-
-
-//	        //  キーボードから入力
-//	        BufferedReader a = new BufferedReader (new InputStreamReader (
-//	        System.in)) ;
-//
-//
-//	     //     System.out.println("おみくじを引きますか？ 【はい→y  / いいえ→ｎ】") ;
-//
-//	          String name = a.readLine() ;   //入力された文字を name 変数に代入
-//
-//	          if (name.equals("y")) {
-//
-//	              System.out.println("名前を入力してください。");
-//
-//
-//
-//	          name = a.readLine() ;
-//	            System.out.println (name + "さんの  おみくじの結果は ・・・") ;
-//
-//	            int tera = (int)(Math.random () * 7) ; // 0から6までの乱数を作る
-//	            String omikuji  = " "  ;  // おみくじの結果を格納する
-//
-//
-//	            switch  (tera) {
-//	              case 0 :
-//	                  omikuji = "大吉" ;
-//	                  break ;
-//
-//	              case 1 :
-//	                  omikuji = "中吉" ;
-//	                  break ;
-//
-//	              case 2 :
-//	                  omikuji = "小吉" ;
-//	                  break ;
-//
-//
-//	              case 3 :
-//	                  omikuji = "吉" ;
-//	                  break ;
-//
-//
-//	              case 4 :
-//	                  omikuji = "凶" ;
-//	                  break ;
-//
-//
-//	              case 5 :
-//	                  omikuji = "大凶" ;
-//	                  break ;
-//
-//
-//	           default :
-//
-//	               System.out.println("入力が正しくありません。") ;
-//	               break ;
-//
-//	            }
-//
-//	               System.out.println (omikuji + "です") ;
-//
-//
-//	    //        }  else if (name.equals("n")) {
-//
-//	    //            System.out.println("また次回に引いてくださいね。") ;
-//
-//	   //         }  else {
-//
-//	    //            System.out.println ("y か ｎ を入力してください。") ;
-//
-//	   //            }
-//	             }
-//	           }
-//
-
-
-//	}
-
-//  }

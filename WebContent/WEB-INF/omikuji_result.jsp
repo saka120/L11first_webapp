@@ -31,43 +31,14 @@
                 <table border="1">
                     <tbody>
                         <tr>
-                            <th>氏名</th>
-                            <td><c:out value="${username}" /></td>
-                        </tr>
+                          //  <th>氏名</th>
+                         //   <td><c:out value="${username}" /></td>
 
-                        <tr>
-                            <th>さんの今日の</th>
-                     //       <td><c:out value="${username}" /></td>
-                        </tr>
+<c:out value="${username}" />さんの運勢は<c:out value="{result}" />です
 
-                        <tr>
-                            <th> 運勢     </th>
-                            <td><c:out value="${omikuji_result}" /></td>
-                        </tr>
-
-                        <tr>
-                            <th>は</th>
-                      //      <td><c:out value="${username}" /></td>
-                        </tr>
-
-                         <tr>
-                            <th>名前</th>
-                            <td><c:out value="${username}" /></td>
-                        </tr>
-
-                        <tr>
-                            <th>です</th>
-                            <td><c:out value="${username}" /></td>
-                        </tr>
+                     </tr>
 
 
-
-
-                  //      <tr>
-                  //          <th>メールアドレス</th>
-                  //          <td><c:out value="${usermail}" /></td>
-                  //      </tr>
-                  //      <tr>
                   //          <th>お問い合わせ内容</th>
                   //          <td>
                   //              <pre><c:out value="${content}" /></pre>

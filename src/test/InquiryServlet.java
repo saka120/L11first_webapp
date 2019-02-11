@@ -1,8 +1,10 @@
 package test;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +33,7 @@ public class InquiryServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
 
-    /*
+
 
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // リクエストパラメータを取得する
